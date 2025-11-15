@@ -1,0 +1,183 @@
+:root {
+  --primary-color: #000;
+  --secondary-dark: #1b1f23;
+  --light-color: #f3f2ef;
+  --low-light-emphasis: rgba(255, 255, 255, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: max(100dvh);
+  padding: 2%;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+main,
+.feed-card,
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: 100%;
+}
+
+form,
+.react-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+form {
+  gap: 20px;
+  max-width: 340px;
+  width: 100%;
+  align-items: center;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  padding: 4px;
+}
+
+@media (max-width: 400px) {
+  form {
+    flex-direction: column;
+  }
+  input {
+    width: 100%;
+  }
+}
+
+input {
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid var(--low-light-emphasis);
+  color: var(--light-color);
+}
+
+button {
+  background-color: var(--light-color);
+  padding: 6px 15px;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.feed-card {
+  width: 100%;
+  max-width: 340px;
+  background-color: var(--secondary-dark);
+  padding: 15px 10px;
+  border-radius: 4px;
+  gap: 20px;
+}
+.intru {
+  width: 100%;
+}
+.card-heading {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.name-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.name-container h1 {
+  width: 100%;
+  max-width: 130px;
+}
+
+.profile {
+  width: 55px;
+}
+.profile img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.premium-member {
+  height: 15px;
+  width: 15px;
+}
+.premium-member img,
+.profile img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+
+small {
+  color: var(--low-light-emphasis);
+  font-size: 12px;
+}
+
+.card-content {
+  gap: 10px;
+}
+
+.card-content p {
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.4px;
+  font-weight: normal;
+}
+
+.card-content .content-img {
+  height: 250px;
+  width: 100%;
+}
+.content-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.react-container {
+  border-top: 1px solid var(--low-light-emphasis);
+  padding-top: 12px;
+}
+
+.icon img {
+  height: 20px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.icon p {
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
